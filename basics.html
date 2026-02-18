@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Example</title>
+</head>
+<body>
+
+<h2 id="output">Waiting for callback...</h2>
+
+<script>
+function myCallbackFunction(callback) {
+    setTimeout(() => {
+        callback("✅ Callback executed successfully!");
+    }, 2000);
+}
+
+function main() {
+    myCallbackFunction(function(result) {
+        document.getElementById("output").textContent = result;
+    });
+}
+
+main();
+</script>
+
+</body>
+</html>
